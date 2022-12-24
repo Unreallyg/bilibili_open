@@ -8,8 +8,8 @@ ua = {'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.
       'referer' : 'https://www.bilibili.com',\
       'Content-Type' : 'application/json'}
 while True:
-    uid = input('动态ID：')
-    num = int(eval(input('获取人数(大于全部点赞人数则获取全部)：')))
+    uid = input('动态ID：').strip()
+    num = int(eval(input('获取人数(大于全部点赞人数则获取全部)：').strip()))
     temp = list()
     temp.append(f'\n本次输入查询人数：{num}\n')
     ima = t.strftime('查询时间(GMT+8:00)：%Y年%m月%d日 %H:%M:%S',t.localtime(t.time()))
