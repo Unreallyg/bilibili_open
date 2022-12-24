@@ -1,10 +1,8 @@
 from os.path import exists as osPathExists
 from os import makedirs as osMakedirs
 #import errors
-#from json import dumps, loads
-#from math import ceil
 from requests import get as rqGet
-url=input('https://api.bilibili.com/x/emote/package?business=watch_full&ids=')
+url=input('https://api.bilibili.com/x/emote/package?business=watch_full&ids=').strip()
 url='https://api.bilibili.com/x/emote/package?business=watch_full&ids='+url
 i = rqGet(url)
 res = i.json()
