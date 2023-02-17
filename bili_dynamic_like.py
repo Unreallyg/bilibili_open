@@ -4,9 +4,11 @@ from os.path import exists as osPathExists
 from os import makedirs as osMakedirs
 import time as t
 rq=ub.PoolManager()
-ua = {'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36' , \
-      'referer' : 'https://www.bilibili.com',\
-      'Content-Type' : 'application/json'}
+ua = {
+      'user-agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36' , 
+      'referer' : 'https://www.bilibili.com',
+      'Content-Type' : 'application/json'
+}
 while True:
     uid = input('动态ID：').strip()
     num = int(eval(input('获取人数(大于全部点赞人数则获取全部)：').strip()))
