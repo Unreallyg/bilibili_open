@@ -1,0 +1,16 @@
+patch:
+  # --- 方案列表（请保留你之前的 schema_list） ---
+  schema_list:
+    - schema: rime_ice
+    - schema: luna_pinyin_tw
+
+  # --- 翻页与选词核心配置 ---
+  key_binder/bindings:
+    # 1. 设置 -= 翻页
+    - { when: has_menu, accept: minus, send: PageUp }
+    - { when: has_menu, accept: equal, send: PageDown }
+    # 2. 设置左右箭头
+    - { when: has_menu, accept: Left, send: Left }
+    - { when: has_menu, accept: Right, send: Right }
+    # 3. 设置 Ctrl+Shift+Z 切换方案
+    - { when: always, accept: "Control+Shift+Z", select: .next }
